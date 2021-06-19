@@ -1,0 +1,16 @@
+
+@import "base-var.scss";
+@import "header-items.scss";
+@import "search-input.scss";
+
+
+.game9ja-search-header-input{
+    //position: absolute;
+    //left: 60px;
+    //bottom: 2 * $base_padding;
+    height: 40px;
+    margin: 0 auto;
+    color: $base_text_color;
+    @extend .game9ja-search-input;
+   // background-color: blue;
+}

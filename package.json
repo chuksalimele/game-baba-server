@@ -1,0 +1,40 @@
+{
+  "name": "Game9ja",
+  "version": "1.0.0",
+  "keywords": [
+    "util",
+    "functional",
+    "server",
+    "client",
+    "browser"
+  ],
+  "author": "chuks",
+  "contributors": [],
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "connect": "^3.6.6",
+    "express": "^4.16.4",
+    "formidable": "^1.2.1",
+    "generate-safe-id": "^1.0.2",
+    "gm": "^1.23.1",
+    "helmet": "^3.15.0",
+    "ioredis": "^3.1.4",
+    "jsonwebtoken": "^7.4.3",
+    "mkdirp": "^0.5.1",
+    "mongodb": "^2.2.30",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.5",
+    "sharp": "^0.21.3",
+    "shortid": "^2.2.8",
+    "socket.io": "^2.2.0",
+    "stockfish": "^10.0.0",
+    "uuid": "^3.1.0"
+  },
+  "scripts": {
+    "start": "node game-server.js"
+  },
+  "engines": {
+    "node": "8.4.0",
+    "npm": "5.3.0"
+  }
+}

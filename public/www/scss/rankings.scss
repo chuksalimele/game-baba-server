@@ -1,0 +1,250 @@
+
+@import "base-var.scss";
+@import "header-items.scss";
+
+$font_color : #444;
+$ranking_pagination_height : 30px;
+$header_row_height: 30px;
+$body_row_height: 40px;
+$photo_width: $body_row_height;
+$sn_width: 30px;
+$two_px : 2px;
+
+$rating_width_s1: 60px;
+$played_width_s1: 40px;
+$pionts_width_s1: 40px;
+
+$rating_width_s2: 80px;
+$played_width_s2: 60px;
+$pionts_width_s2: 60px;
+
+$rating_width_s3: 80px;
+$played_width_s3: 80px;
+$pionts_width_s3: 80px;
+
+
+@mixin game9ja-rankings-row($_row_height , $font_weight){
+    position: relative;
+    border-bottom: $list_divider_color solid 1px;
+    font-weight: $font_weight;
+    
+    > :nth-child(1){/*serial number*/
+        position: absolute;
+        left: $base_padding;
+        width: $sn_width;
+        bottom: $base_padding;                  
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        
+        //background-color: orange;  
+        
+    }
+    > :nth-child(2){/*helper div to help center the profile pic*/
+        position: absolute;
+        left: $base_padding + $sn_width;
+        width: $photo_width;
+        height: $_row_height;
+        
+        //background-color: yellow;
+
+        > img{/* profile pic*/
+            position: absolute;
+            top: $two_px;
+            left: $two_px;
+            width: $_row_height - 2* $two_px;
+            height: $_row_height - 2* $two_px;
+            border-radius: 50%;
+        }
+
+    }
+
+    
+    @include other_columns($rating_width_s1, $played_width_s1, $pionts_width_s1);
+    
+    @media only screen and (min-width : 480px){
+        @include other_columns($rating_width_s2, $played_width_s2, $pionts_width_s2);
+    }
+    
+    
+    @media only screen and (min-width : 768px){
+        @include other_columns($rating_width_s3, $played_width_s3, $pionts_width_s3);
+    }
+    
+}
+
+@mixin other_columns($rating_width, $played_width, $pionts_width){
+        
+    > :nth-child(3){/*Full name*/
+        position: absolute;
+        left: $base_padding + $sn_width + $photo_width;
+        right: $rating_width + $played_width + $pionts_width + $base_padding;
+        bottom: $base_padding;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        //background-color: #bbb;
+    }
+
+
+    > :nth-child(4){/*Rating*/
+        position: absolute;
+        right:  $played_width + $pionts_width + $base_padding;
+        bottom: $base_padding;
+        width : $rating_width;
+        text-align: center;            
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        //background-color: #bbf;
+    }
+
+    > :nth-child(5){/*Played*/
+        position: absolute;
+        right:  $pionts_width + $base_padding;
+        bottom: $base_padding;
+        width : $played_width;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        //background-color: #bba;
+    }
+
+    > :nth-child(6){/*Points*/
+        position: absolute;
+        right:  $base_padding;
+        bottom: $base_padding;
+        width : $pionts_width;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        //background-color: #bbc;
+    }
+
+}
+
+.game9ja-rankings{
+    position: absolute;
+    top : 0;
+    left: 0;
+    width : 100%;
+    max-width: 100%;
+    height: 100%;
+    overflow: hidden; 
+
+    > .game9ja-rankings-header{
+        @extend .game9ja-header;
+        position: relative;
+
+        > :nth-child(1){ /*holding title*/
+            margin: 0 auto; // try centering it
+            width: 200px;     
+            height:  100%;
+            padding: 5px;
+            font-size: 18px;
+            text-align: center;
+            @include box-sizing(border-box);
+
+        }
+
+    }
+
+    > .game9ja-rankings-pagination{
+        position : absolute;
+        top : $header_height;
+        margin: 0;
+        left :0;
+        font-size: 14px;  
+        //color : $font_color; 
+        height: $ranking_pagination_height;
+        width: 100%;
+        
+        background-color: $base_background;
+        color: $base_text_color;
+        //vertical-align: middle;
+
+        border-bottom: $list_divider_width #777 solid;
+
+        > :nth-child(1){//
+                        position : absolute;
+                        bottom : $base_padding;
+                        left : $base_padding;
+                        font-size: 20px;
+
+        }
+
+
+        > :nth-child(2){// left and right arrow
+                        position : absolute;
+                        bottom : $base_padding;
+                        right : $base_padding;
+                        font-size: 14px;
+                        cursor: pointer;
+        }
+    }
+
+
+    > .game9ja-rankings-display{
+
+        position : absolute;
+        top : $header_height + $ranking_pagination_height;
+        left :0; 
+        right :0;
+        bottom : $base_padding;
+        margin: 0;
+
+        width: 100%;
+
+
+        > :nth-child(1){//header container
+                        position : absolute;
+                        top : 0;
+                        left: 0;
+                        height: $header_row_height;
+                        width: 100%;
+                        padding-left : $base_padding;
+                        padding-right : $base_padding;
+                        @include box-sizing(border-box);
+                        
+                        background-color: $base_background;
+                        color: $base_text_color;
+                        
+                        > .game9ja-rankings-header-row{
+                            height: 100%;
+                            @include  game9ja-rankings-row($header_row_height, bold);
+                            
+                            //background-color: brown;
+                        }
+        }
+        > :nth-child(2){//body container
+                        position : absolute;
+                        top : $header_row_height;
+                        left: 0;         
+                        bottom:0;
+                        width: 100%;
+                        padding-left : $base_padding;
+                        padding-right : $base_padding;
+                        @include box-sizing(border-box);
+                        //background-color: blue;
+                        overflow: auto;
+                        > .game9ja-rankings-body-row{
+                            height: $body_row_height;
+                            cursor: pointer;
+                            @include game9ja-rankings-row($body_row_height, normal);
+                            //background-color: bisque;
+                        }
+                        
+                        > .game9ja-rankings-body-row:hover{
+                            background-color: $list_item_hover_color;
+                        }
+        }
+
+    }
+
+}

@@ -1,0 +1,76 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 21, 2017, 5:35:04 AM
+    Author     : Engr Chuks
+*/
+.game9ja-board-abstract, .game9ja-chess-board, .game9ja-draughts-board, .game9ja-draughts-board-inverse {
+  /*Deprecated*/
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  background: #fff; }
+
+.game9ja-board-abstract tr td, .game9ja-chess-board tr td, .game9ja-draughts-board tr td, .game9ja-draughts-board-inverse tr td {
+  /*Deprecated*/
+  border: 1px #777 solid; }
+
+.game9ja-chess-board, .game9ja-draughts-board, .game9ja-draughts-board-inverse {
+  /*Deprecated*/ }
+
+.game9ja-chess-board tr:nth-child(odd) td:nth-child(even), .game9ja-draughts-board tr:nth-child(odd) td:nth-child(even) {
+  /*Deprecated*/
+  background: #444; }
+
+.game9ja-chess-board tr:nth-child(even) td:nth-child(odd), .game9ja-draughts-board tr:nth-child(even) td:nth-child(odd) {
+  /*Deprecated*/
+  background: #444; }
+
+/*Deprecated - will cause conflict in mobile device especially small screen device
+  where the touch by the hand must not be on the square to be highlighted since we
+  will be using a hand-pointer image to aid in selection where by the touch will
+  actually be some offset away from the selected square.
+
+  Solution - Instead use javascript to set opacity on the square you want highlighted by 
+  tracking the table td element. 
+
+
+.game9ja-chess-board tr:nth-child(odd) td:nth-child(even):hover{
+    opacity : $highlight_opacity;
+}
+
+.game9ja-chess-board tr:nth-child(even) td:nth-child(odd):hover{
+    opacity : $highlight_opacity;
+}
+*/
+.game9ja-draughts-board-inverse {
+  border: 1px #777 solid; }
+
+.game9ja-draughts-board-inverse tr:nth-child(odd) td:nth-child(odd) {
+  background: #000; }
+
+.game9ja-draughts-board-inverse tr:nth-child(even) td:nth-child(even) {
+  background: #000; }
+
+piece, .white-piece-o, .black-piece-o {
+  border-radius: 50%;
+  position: absolute;
+  border: 2px solid #aaa;
+  cursor: pointer;
+  box-sizing: border-box;
+  /*-webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;*/ }
+
+.white-piece-o {
+  background-color: #CC0000; }
+
+.black-piece-o {
+  background-color: #00001F; }
+
+/*# sourceMappingURL=board.css.map */

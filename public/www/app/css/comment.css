@@ -1,0 +1,158 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 18, 2017, 4:11:48 PM
+    Author     : Engr Chuks
+*/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 20, 2017, 3:37:46 PM
+    Author     : Engr Chuks
+*/
+.game9ja-header, .game9ja-light-header {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  height: 50px;
+  background: #222;
+  color: #eee; }
+
+.game9ja-light-header {
+  background: #565; }
+
+.game9ja-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 35px;
+  background: #222;
+  color: #eee; }
+
+.game9ja-comment {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0; }
+
+.game9ja-comment-body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 40px;
+  width: 100%;
+  padding: 0;
+  overflow: auto;
+  background: #eee; }
+  .game9ja-comment-body > div > .game9ja-comment-selected {
+    background: #ededde !important; }
+
+.game9ja-comment-item {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  color: #777; }
+  .game9ja-comment-item > :nth-child(1) {
+    /*user profile pic*/
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    cursor: pointer; }
+  .game9ja-comment-item > :nth-child(2) {
+    /*user full name*/
+    width: 100px;
+    position: absolute;
+    top: 5px;
+    left: 45px;
+    color: #444;
+    font-size: 14px; }
+  .game9ja-comment-item > :nth-child(3) {
+    /*time ago*/
+    width: 80px;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    font-size: 11px; }
+  .game9ja-comment-item > :nth-child(4) {
+    /*user comment replied*/
+    position: relative;
+    top: 0;
+    left: 4px;
+    font-size: 12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background: #eee;
+    color: #777;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px; }
+    .game9ja-comment-item > :nth-child(4) > :nth-child(1) {
+      margin-right: 5px; }
+    .game9ja-comment-item > :nth-child(4) > :nth-child(2) {
+      font-weight: bold; }
+    .game9ja-comment-item > :nth-child(4) > :nth-child(3) {
+      max-height: 45px;
+      overflow: hidden;
+      word-wrap: break-word; }
+  .game9ja-comment-item > :nth-child(5) {
+    /*user comment content*/
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 4px;
+    font-size: 14px;
+    white-space: pre-wrap;
+    word-wrap: break-word; }
+  .game9ja-comment-item > :nth-child(6) {
+    /*reply comment icon*/
+    position: relative;
+    top: 5px;
+    left: 4px;
+    cursor: pointer; }
+  .game9ja-comment-item > :nth-child(7) {
+    /*like comment icon*/
+    position: absolute;
+    bottom: 5px;
+    right: 100px;
+    cursor: pointer;
+    font-size: 11px; }
+  .game9ja-comment-item > :nth-child(8) {
+    /*dislike comment icon*/
+    position: absolute;
+    bottom: 5px;
+    right: 25px;
+    cursor: pointer;
+    font-size: 11px; }
+  .game9ja-comment-item :nth-child(9) {
+    position: absolute;
+    bottom: 5px;
+    right: 5px; }
+  .game9ja-comment-item > .comment-sent:after {
+    /*sent comment status*/
+    font-size: 12px;
+    content: '\2713';
+    color: #222222; }
+  .game9ja-comment-item > .comment-not-sent:after {
+    /*not sent comment status*/
+    font-size: 12px;
+    content: '...';
+    color: #222222; }
+
+/*# sourceMappingURL=comment.css.map */

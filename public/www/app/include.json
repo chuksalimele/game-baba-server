@@ -1,0 +1,304 @@
+
+
+{
+    "app_name": "GameBaba",
+
+    "namespace": "Ns",
+    
+    "domain": "localhost", // used if loaded from a desktop or mobile device
+    
+    "protocol": "https:",  // used if loaded from a desktop or mobile device
+    
+    /**
+     The build tool is responsible for automatically creating this property.   
+     */
+    "build": {
+        /*
+         "prod": false // the build tool will set this to true - this signifies the build should be used
+         
+         this css and js files goes below
+         
+         "merge_js":{
+         //js files merged in the build for creating namespace related object
+         },
+         */
+    },
+
+    /**
+     * css and js files required for all devices but loaded absolutely as specified. These files are loaded first
+     */
+    "absolute": {
+
+        "css": [
+        ],
+
+        "js": [
+            "app/view/test/js/test.js",
+            "app/view/test/simulate/js/simulate-user.js",
+            "app/view/test/simulate/js/simulate-group.js",
+            "app/view/test/simulate/js/simulate-chat.js",
+            "app/view/test/simulate/js/simulate-comment.js",
+            "app/view/test/simulate/js/simulate-contact.js",
+            "app/view/test/simulate/js/simulate-play-request.js",
+            "app/view/test/simulate/js/simulate-match.js",
+            "app/view/test/simulate/js/simulate-spectator.js",
+            "app/view/test/simulate/js/simulate-stat.js",
+            "app/view/test/simulate/js/simulate-tournament.js",
+            "cordova.js",
+            "lib/three.min.js",
+            "lib/chess.min.js",
+            "lib/localforage.min.js",            
+            "app/resources/game_engines/draftgame.js",//we also use it worker for draughts engine
+            "lib/socket.io.js",
+            "lib/jquery-1.10.2.min.js",
+            //"lib/bootstrap.min.js",// // @Deprecated - does not integrate well with game9ja css design 
+            "lib/tween/TweenMax.min.js",
+            "lib/threejs-loaders/OBJLoader.js",
+            "lib/threejs-loaders/MTLLoader.js",
+            "lib/threejs-loaders/TDSLoader.js"
+                    //"/socket.io/socket.io.js" //@Deprecated - socket.io default url route is not neccesary and can cause confusion 
+],
+
+        /**
+         *These are js files that will not abort the application if not found.
+         *A typical case is failure to load cordova.js in the browser where it is
+         *typically not required
+         *
+         */
+        "load_exceptions": [
+            "cordova.js"//if not found no worries - possibly attempted to load in the browser 
+]
+    },
+
+    /**
+     * css and js files required for all devices. These files are loaded second
+     */
+    "app": {
+
+        "css": [
+            //"bootstrap.min.css", // disabled - does not integrate well with game9ja css design 
+            //"bootstrap-theme.min.css", // disabled - does not integrate well with game9ja css design 
+            "app-main.css",
+            "app-icons.css",
+            "choose-icon.css",
+            "default-header.css",
+            "board.css",
+            "form.css",
+            "tab.css",
+            "login.css",
+            "font-awesome-5.7.2.all.min.css",
+            "font-awesome-4.7.0.min.css",//most be below version 5
+            "menu.css",
+            "dialog.css",
+            "header-items.css",
+            "game-main.css", 
+            "live-games-list.css", 
+            "chat.css", 
+            "comment.css", 
+            "game-view-right-panel.css", 
+            "game-view-b-right-panel.css",
+            "game-watch-right-panel.css", 
+            "game-view.css",
+            "game-view-b.css",
+            "game-watch.css",     
+            "message-input.css", 
+            "section-container.css",  
+            "game-stats.css",
+            "game-view-options.css",
+            "groups-live.css",
+            "tournaments-live.css",
+            "user-show-list.css",
+            "horizontal-list.css",
+            "tournament-details.css",
+            "group-details.css",
+            "match-fixture-list.css",
+            "simple-list.css",
+            "user-profile.css",
+            "wait-player.css",
+            "game-contacts.css",
+            "notifications.css",
+            "performance-view.css",
+            "slots-edit.css",
+            "player-passport.css",
+            "rating.css",
+            "rankings.css",
+            "tournaments-view.css",
+            "search-input.css",
+            "search-header.css",
+            "search-view.css",
+            "user-photo-view.css",
+            "group-photo-view.css",
+            "tournament-photo-view.css",
+            "contact-chat-view.css",
+            "group-chat-view.css",
+            "tournament-general-chat-view.css",
+            "tournament-inhouse-chat-view.css"
+        ],
+
+        "js": [
+            "Auth.js",
+            "Const.js",
+            "Emoji.js",            
+            "Stats.js",
+            "Options.js",
+            "Util.js",
+            "Robot.js",
+            "Spectators.js",
+            "Bluetooth.js",
+            "Match.js",
+            "GameEventsController.js",
+            "GroupEventsController.js",
+            "TournamentEventsController.js",
+            "PlayRequest.js",
+            "msg/AbstractChat.js",
+            "msg/AbstractPeerToPeerChat.js",
+            "msg/AbstractComment.js",
+            "msg/AbstractMessage.js",
+            "msg/GameComment.js",
+            "msg/GameChat.js",
+            "msg/ContactChat.js",
+            "msg/GroupChat.js",
+            "msg/TournamentGeneralChat.js",
+            "msg/TournamentInhouseChat.js",
+            "msg/VideoCall.js",
+            "msg/VoiceCall.js",
+            "ui/UI.js",
+            "ui/Dialog.js",
+            "ui/Photo.js",
+            "ui/GamePanel.js",
+            "ui/AbstractGameSection.js",
+            "view/Tournament.js",
+            "view/Notifications.js",
+            "view/Group.js",
+            "view/UserProfile.js",
+            "view/Contacts.js",
+            "view/Performance.js",
+            "view/Rankings.js",
+            "view/TournamentsView.js",
+            "view/SearchView.js",
+            "view/CreateGroup.js",
+            "view/CreateTournament.js",
+            "view/EditGroup.js",
+            "view/EditTournament.js",
+            "game/Chess.js",
+            "game/Draughts.js",
+            "game/Ludo.js",
+            "game/Solitaire.js",
+            "game/Whot.js",
+            "game/two/Chess2D.js",
+            "game/two/Draughts2D.js",
+            "game/two/Ludo2D.js",
+            "game/two/Solitaire2D.js",
+            "game/two/Whot2D.js",
+            "game/three/Chess3D.js",
+            "game/three/Draughts3D.js",
+            "game/three/Ludo3D.js",
+            "game/three/Solitaire3D.js",
+            "game/three/Whot3D.js",
+            "game/AbstractBoard2D.js",
+            "game/AbstractBoard3D.js"
+        ] 
+    },
+
+    /**
+     * css and js files required for small size devices e.g smart phones
+     */
+    "small": {
+
+        "css": [
+
+        ],
+
+        "js": [ 
+            "GameHome-sd.js", 
+            "GameSelect-sd.js",
+            "GameView-sd.js",
+            "GameViewB-sd.js",
+            "GameWatch-sd.js",
+            "GameGroup-sd.js",
+            "GameTournament-sd.js",
+            "GameContacts-sd.js",
+            "GameUserProfile-sd.js",
+            "GameRankings-sd.js",
+            "GamePerformance-sd.js",
+            "GameSearchView-sd.js",
+            "GameNotifications-sd.js",
+            "GameContactChat-sd.js",
+            "GameGroupChat-sd.js",
+            "GameTournamentGeneralChat-sd.js",
+            "GameTournamentInhouseChat-sd.js",
+            "GameCreateGroup-sd.js",
+            "GameCreateTournament-sd.js",
+            "GameEditGroup-sd.js",
+            "GameEditTournament-sd.js"
+        ] 
+    },
+
+    /**
+     * css and js files required for medium size devices e.g tablets 
+     */
+    "medium": {
+
+        "css": [
+
+        ],
+
+        "js": [
+            "GameHome-md.js", 
+            "GameSelect-md.js",
+            "GameView-md.js",
+            "GameViewB-md.js",
+            "GameWatch-md.js",
+            "GameGroup-md.js",
+            "GameTournament-md.js",
+            "GameContacts-md.js",
+            "GameUserProfile-md.js",
+            "GameRankings-md.js",
+            "GamePerformance-md.js",
+            "GameSearchView-md.js",
+            "GameNotifications-md.js",
+            "GameContactChat-md.js",
+            "GameGroupChat-md.js",
+            "GameTournamentGeneralChat-md.js",
+            "GameTournamentInhouseChat-md.js",
+            "GameCreateGroup-md.js",
+            "GameCreateTournament-md.js",
+            "GameEditGroup-md.js",
+            "GameEditTournament-md.js"
+        ]
+    },
+
+    /**
+     * css and js files required for large size devices e.g desktops and laptops 
+     */
+    "large": {
+
+        "css": [
+
+        ],
+
+        "js": [
+            "GameHome-ld.js",
+            "GameSelect-ld.js",
+            "GameView-ld.js",
+            "GameViewB-ld.js",
+            "GameWatch-ld.js",
+            "GameGroup-ld.js",
+            "GameTournament-ld.js",
+            "GameContacts-ld.js",
+            "GameUserProfile-ld.js",
+            "GameRankings-ld.js",
+            "GamePerformance-ld.js",
+            "GameSearchView-ld.js",
+            "GameNotifications-ld.js",
+            "GameContactChat-ld.js",
+            "GameGroupChat-ld.js",
+            "GameTournamentGeneralChat-ld.js",
+            "GameTournamentInhouseChat-ld.js",
+            "GameCreateGroup-ld.js",
+            "GameCreateTournament-ld.js",
+            "GameEditGroup-ld.js",
+            "GameEditTournament-ld.js"
+        ]
+    }
+}

@@ -1,0 +1,77 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 31, 2017, 2:24:29 PM
+    Author     : Engr Chuks
+*/
+
+@import "base-var.scss";
+
+$heading_color : #ddd;
+$height : 30px;//must be 30px - please do not change! 30px is used in Main.js for normalization.
+
+.game9ja-menu{
+    position: absolute;
+    //width : 200px;
+    //height : 200px;
+    min-width : 120px;
+    max-height : 100%;
+    border: 1px #ccc solid;
+    color : #222;
+    background: white;
+    @include box-shadow(0 2px 5px rgba(0, 0, 0, 0.3));
+
+    > .game9ja-menu-header{
+        position: relative;
+        //top:0;
+        //left:0;
+        width: 100%;
+        padding : $base_padding;
+        text-align: center;
+        border-bottom : 1px #ccc solid;
+        height: $height;
+        @include box-sizing(border-box);
+        font-weight: 600;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    > .game9ja-menu-body{
+        position: relative;
+        //top : $height;
+        //bottom:$height;
+        width: 100%;        
+        overflow: auto;
+        padding : $base_padding;
+        @include box-sizing(border-box);
+        >div{
+            min-height: $height;
+            cursor: pointer;
+            padding : $base_padding;
+            @include box-sizing(border-box);
+            &:hover{
+                background: #eee;
+            }
+        }
+
+    }
+
+    > .game9ja-menu-footer{
+        position: relative;
+        //bottom: 0;
+        height: $height;
+        width: 100%;
+        padding : $base_padding;
+        text-align: center;
+        border-top: 1px #ccc solid;
+        @include box-sizing(border-box);
+        font-weight: 600;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}

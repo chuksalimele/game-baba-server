@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../app/css/header-items.css" />
+        <link rel="stylesheet" href="../app/css/game-watch.css" />
+        <link rel="stylesheet" href="../app/css/font-awesome-4.7.0.min.css" />
+    </head>
+    <body>
+
+        <div class="game9ja-game-watch"  id="test">
+            <div class="game9ja-game-watch-header">
+                <div>
+                    <span>Score:</span> <span>1 - 0</span>
+                    <div>Live</div>
+                </div>
+                <i class="fa fa-arrow-left game9ja-header-item-left game9ja-back-btn"></i>
+                <i class="fa fa-comments game9ja-header-item-right-a"></i>
+                <i class="fa fa-ellipsis-v game9ja-header-item-right"></i>
+            </div>
+            <div class="game9ja-game-watch-body">
+
+                <div id="game9ja-game-watch-main">
+                    
+
+                    <div id="test_width" style="background-color: red;"><!--sizing and positioning using javascript-->
+                        <!--some upper display e.g time countdown and online status-->
+                        <!--note when countdown starts it means the move is delivered to the opponent
+                        and when it stop it means the opponent has played or the countdown is over i.e timeout-->
+                        <div>Black turn</div> <!--Feedback-->
+                        <div>05:34</div> <!--countdown-->
+                        <div><!-- user profile display.-->
+                            <img src="../app/images/default_group.png" alt=""/>
+                            <span> Firstname_black Surname_black </span>
+                            <span> thinking... </span>
+                        </div>                  
+                        <div>W 3, L 2, D 3 </div> <!--win loss draw - this is for the current set e.g first 10 first 5 as called in nigeria-->
+                    </div>
+                    <div style="background-color: blue;"><!--sizing and positioning using javascript-->
+                        <!--the game board-->
+                    </div>
+                    <div style="background-color: green;"><!--sizing and positioning using javascript-->
+                        <!--some lower display e.g time countdown -->
+                        <div>03:25</div> <!--countdown-->
+                        <div><!-- user profile display.-->
+                            <img src="../app/images/default_group.png" alt=""/>
+                            <span> Firstname_white Surname_white </span>
+                            <span> thinking... </span>
+                        </div> 
+                        <div>W 2, L 3, D 3 </div> <!--win loss draw - this is for the current set e.g first 10 first 5 as called in nigeria-->
+                    </div>
+                </div>
+                <div id="game9ja-game-watch-right-content">
+                    <!--holds panel in the side. this show by default in 
+                    large device but hidden in small device gets revealled dynamically-->
+                    <div class="game9ja-game-watch-right-panel">
+                        <span id="game9ja-game-watch-right-panel-header-title"></span>
+                        <span class="fa fa-close" id="game9ja-game-watch-right-panel-close"></span>                        
+                        <div id="game9ja-game-watch-right-panel-body">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            
+        </script>
+
+    </body>
+</html>
+
+

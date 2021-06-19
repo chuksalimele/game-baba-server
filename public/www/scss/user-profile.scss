@@ -1,0 +1,267 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 11, 2017, 1:45:07 PM
+    Author     : Engr Chuks
+*/
+@import "base-var.scss";
+
+$font_color : #444;
+$user_profile_img_height : 180px;
+
+.game9ja-user-profile{
+    padding : 0;
+    overflow: auto;
+    > :nth-child(1){
+        border-radius: 0px !important;
+        padding : 0 !important;
+        position : relative;
+
+        >:nth-child(1){/*user profile pic*/
+
+            width: 100%;
+            height: $user_profile_img_height;   
+            background: #222;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+
+            > div{/*helper div to help center the user profile pic*/
+
+                max-width: 2 * $user_profile_img_height;
+                width:100%;
+                height: 100%; 
+                padding: 0px;
+                margin: 0 auto;
+                > img{/*group profile pic*/
+                    width: 100%;
+                    height: 100%;  
+                }
+            }
+        }
+        >:nth-child(2){/*user name*/
+            font-weight: 700;  
+            color : $font_color;
+            padding-left : $base_padding;
+            padding-right : $base_padding;
+            box-sizing: border-box;
+            //background-color: blue;
+        }
+        >:nth-child(3){/*user profile status*/
+            font-weight: 300;  
+            font-size: 12px;
+            color: #777;
+            padding-left : $base_padding;
+            padding-right : $base_padding;
+            box-sizing: border-box;            
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            //background-color: red;
+        }
+        >:nth-child(4){/*user phone number*/
+            font-weight: 300;  
+            font-size: 12px;
+            color: #777;
+            padding-left : $base_padding;
+            padding-right : $base_padding;
+            box-sizing: border-box;            
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            //background-color: red;
+        }
+        >:nth-child(5){/*last modified*/
+            font-weight: 300;  
+            font-size: 10px;
+            color: #aaa;
+            padding-left : $base_padding;
+            padding-right : $base_padding;
+            box-sizing: border-box;            
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            //background-color: red;
+        }
+
+        >:nth-child(6){/*edit botton*/
+            color: black; 
+            position: absolute;
+            bottom: $base_padding * 2;
+            right: $base_padding * 2;
+            cursor: pointer;
+        }
+               
+        userheader{
+           position: absolute; 
+            top: 0; 
+            left: 0; 
+            height: 40px; 
+            width: 100%;
+            color: white; 
+            z-index: 1; 
+        }
+        >:nth-child(7){
+            @extend userheader;
+            background: black; 
+            opacity: 0.3; 
+        }
+        >:nth-child(8){
+            @extend userheader;
+            
+            >:nth-child(1){/*back button*/
+                position: absolute; 
+                top: 10px;
+                left: 10px; 
+                cursor: pointer;
+
+            }
+            
+            >:nth-child(2){/*comment*/
+                position: absolute;
+                top: 10px; 
+                right: 10px; 
+                cursor: pointer;
+
+            }
+        }
+    }
+
+    > :nth-child(2){/*other phone numbers*/
+        border-radius: 0px !important;
+        position : relative;
+        > :nth-child(1){
+            position : relative;
+            font-size: 18px;  
+            color : $font_color; 
+            height: 30px;            
+            @include box-sizing(box-sizing);
+            border-bottom: $list_divider_width $list_divider_color solid;            
+            display: table-cell;
+            vertical-align: bottom;
+        }
+        
+    }
+
+    > :nth-child(3){/*player ranking*/
+        border-radius: 0px !important;
+        position : relative;
+        
+        > :nth-child(1){
+            position : relative;
+            font-size: 18px;  
+            color : $font_color; 
+            height: 30px;
+            @include box-sizing(box-sizing);
+            border-bottom: $list_divider_width $list_divider_color solid;            
+            display: table-cell;
+            vertical-align: bottom;
+            //background: red;
+        }
+        
+        > input[type=button]{
+                background-color : transparent;
+                cursor: pointer;                
+                height : 30px;
+                font-size: 14px;
+                outline : none;
+                border : 1px #aaa solid;
+                border-radius : 2px;
+                > &:hover{              
+                    background-color : #eee;
+                    cursor: pointer;
+                }  
+            }
+    }
+    
+    > :nth-child(4){/*group belong*/
+        border-radius: 0px !important;
+        position : relative;
+        
+        
+        > :nth-child(1){
+            position : relative;
+            font-size: 18px;  
+            color : $font_color; 
+            height: 30px;
+            @include box-sizing(box-sizing);
+            border-bottom: $list_divider_width $list_divider_color solid;            
+            display: table-cell;
+            vertical-align: bottom;
+            //background: red;
+        }
+        > :nth-child(2){
+            font-weight: 300;
+            color : $font_color;    
+            background-color: #eee;
+            position: absolute;
+            top : 20px;
+            right: 20px;
+            min-width: 30px;
+            @include border-radius(50%);
+            text-align: center;
+        }
+    }
+    
+    
+
+    > :nth-child(5){/*group in common*/
+        border-radius: 0px !important;
+        position : relative;
+        > :nth-child(1){
+            position : relative;
+            font-size: 18px;  
+            color : $font_color; 
+            height: 30px;            
+            @include box-sizing(box-sizing);
+            border-bottom: $list_divider_width $list_divider_color solid;            
+            display: table-cell;
+            vertical-align: bottom;
+            //background: red;
+        }
+        
+        > :nth-child(2){
+            font-weight: 300;
+            color : $font_color;    
+            background-color: #eee;
+            position: absolute;
+            top : 20px;
+            right: 20px;
+            min-width: 30px;
+            @include border-radius(50%);
+            text-align: center;
+        }
+    }
+    
+
+    > :nth-child(6){/*tournament belong*/
+        border-radius: 0px !important;
+        position : relative;
+        > :nth-child(1){
+            position : relative;
+            font-size: 18px;  
+            color : $font_color; 
+            height: 30px;            
+            @include box-sizing(box-sizing);
+            border-bottom: $list_divider_width $list_divider_color solid;            
+            display: table-cell;
+            vertical-align: bottom;
+            //background: red;
+        }
+        
+        > :nth-child(2){
+            font-weight: 300;
+            color : $font_color;    
+            background-color: #eee;
+            position: absolute;
+            top : 20px;
+            right: 20px;
+            min-width: 30px;
+            @include border-radius(50%);
+            text-align: center;
+        }
+    }
+}

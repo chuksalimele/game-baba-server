@@ -1,0 +1,374 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 1, 2017, 4:28:52 PM
+    Author     : Engr Chuks
+*/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 20, 2017, 3:37:46 PM
+    Author     : Engr Chuks
+*/
+.game9ja-header, .game9ja-light-header, .game9ja-game-watch > .game9ja-game-watch-header {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  height: 50px;
+  background: #222;
+  color: #eee; }
+
+.game9ja-light-header {
+  background: #565; }
+
+.game9ja-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 35px;
+  background: #222;
+  color: #eee; }
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 20, 2017, 3:37:46 PM
+    Author     : Engr Chuks
+*/
+.game9ja-header, .game9ja-light-header, .game9ja-game-watch > .game9ja-game-watch-header {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  height: 50px;
+  background: #222;
+  color: #eee; }
+
+.game9ja-light-header {
+  background: #565; }
+
+.game9ja-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 35px;
+  background: #222;
+  color: #eee; }
+
+.game9ja-header-item-right {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.game9ja-header-item-right-a {
+  position: absolute;
+  top: 5px;
+  right: 35px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.game9ja-header-item-right-b {
+  position: absolute;
+  top: 5px;
+  right: 65px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.game9ja-header-item-right-c {
+  position: absolute;
+  top: 5px;
+  right: 95px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.game9ja-header-item-right-d {
+  position: absolute;
+  top: 5px;
+  right: 125px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.game9ja-header-item-right-e {
+  position: absolute;
+  top: 5px;
+  right: 155px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.game9ja-header-item-left {
+  position: absolute;
+  top: 5px;
+  left: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.game9ja-header-item-left-a {
+  position: absolute;
+  top: 5px;
+  left: 50px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.game9ja-header-item-left-b {
+  position: absolute;
+  top: 5px;
+  left: 80px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.game9ja-game-watch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+  .game9ja-game-watch > .game9ja-game-watch-header > :nth-child(1) {
+    /*holding the score and the live status*/
+    margin: 0 auto;
+    width: 100px;
+    height: 100%;
+    padding: 5px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+    .game9ja-game-watch > .game9ja-game-watch-header > :nth-child(1) > :nth-child(2) {
+      /*the actual score*/ }
+    .game9ja-game-watch > .game9ja-game-watch-header > :nth-child(1) > :nth-child(3) {
+      /*the live status*/
+      width: 85%;
+      text-align: right;
+      color: #00aa00; }
+  .game9ja-game-watch > .game9ja-game-watch-body {
+    /* holds center panel for game playiing area e.g game board*/
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    color: #ddd;
+    /*mobile first*/ }
+    .game9ja-game-watch > .game9ja-game-watch-body > :nth-child(1) {
+      /* holds center panel for game playiing area e.g game board*/
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(black 15%, transparent 16%) 0 0, radial-gradient(black 15%, transparent 16%) 8px 8px, radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 0 1px, radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 8px 9px;
+      background-color: #282828;
+      background-size: 16px 16px; }
+      .game9ja-game-watch > .game9ja-game-watch-body > :nth-child(1) > :nth-child(1) {
+        /*center the upper panel inside the ceter panel*/
+        position: relative;
+        margin: 0 auto;
+        background-color: #307e4e; }
+        .game9ja-game-watch > .game9ja-game-watch-body > :nth-child(1) > :nth-child(1) > :nth-child(1) {
+          /*general feedback*/
+          font-size: 14px;
+          font-style: italic;
+          width: 100%;
+          text-align: center;
+          padding-top: 3px;
+          padding-bottom: 2px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap; }
+        .game9ja-game-watch > .game9ja-game-watch-body > :nth-child(1) > :nth-child(1) > :nth-child(2) {
+          /*the player_1 countdown time in the upper panel*/
+          position: absolute;
+          bottom: 0px;
+          left: 5px;
+          font-size: 12px; }
+        .game9ja-game-watch > .game9ja-game-watch-body > :nth-child(1) > :nth-child(1) > :nth-child(3) {
+          /*the player_1 profile pic and name display*/
+          position: relative;
+          margin: 0 auto;
+          width: 200px;
+          max-width: 100%;
+          font-size: 14px;
+          padding-top: 5px;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+          .game9ja-game-watch > .game9ja-game-watch-body > :nth-child(1) > :nth-child(1) > :nth-child(3) > :nth-child(1) {
+            /*player_1 profile image*/
+            width: 30px;
+            height: 30px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            border-radius: 50%;
+            margin-right: 5px; }
+          .game9ja-game-watch > .game9ja-game-watch-body > :nth-child(1) > :nth-child(1) > :nth-child(3) > :nth-child(2) {
+            /*player_1 profile full name*/
+            width: 150px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            position: absolute;
+            left: 40px;
+            top: 5px; }
+          .game9ja-game-watch > .game9ja-game-watch-body > :nth-child(1) > :nth-child(1) > :nth-child(3) > :nth-child(3) {
+            /*player_1 activity status*/
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            position: absolute;
+            left: 40px;
+            bottom: 3px;
+            font-size: 14px;
+            font-style: italic;
+            color: #00bb00; }
+        .game9ja-game-watch > .game9ja-game-watch-body > :nth-child(1) > :nth-child(1) > :nth-child(4) {
+          /*the player_1 win, loss, draw, display*/
+          position: absolute;
+          bottom: 0px;
+          right: 5px;
+          width: 200px;
+          text-align: right;
+          font-size: 12px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap; }
+      .game9ja-game-watch > .game9ja-game-watch-body > :nth-child(1) > :nth-child(2) {
+        /*center the board panel inside the ceter panel*/
+        position: relative;
+        margin: 0 auto;
+        background: black; }
+      .game9ja-game-watch > .game9ja-game-watch-body > :nth-child(1) > :nth-child(3) {
+        /*center the lower panel inside the ceter panel*/
+        position: relative;
+        margin: 0 auto;
+        padding: 5px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        background-color: #307e4e; }
+        .game9ja-game-watch > .game9ja-game-watch-body > :nth-child(1) > :nth-child(3) > :nth-child(1) {
+          /*the player_2 countdown time in the lower panel*/
+          position: absolute;
+          top: 2px;
+          left: 5px;
+          font-size: 12px; }
+        .game9ja-game-watch > .game9ja-game-watch-body > :nth-child(1) > :nth-child(3) > :nth-child(2) {
+          /*the player_2 profile pic and name display*/
+          position: relative;
+          margin: 0 auto;
+          width: 200px;
+          max-width: 100%;
+          font-size: 14px; }
+          .game9ja-game-watch > .game9ja-game-watch-body > :nth-child(1) > :nth-child(3) > :nth-child(2) > :nth-child(1) {
+            /*player_2 profile image*/
+            width: 30px;
+            height: 30px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            border-radius: 50%; }
+          .game9ja-game-watch > .game9ja-game-watch-body > :nth-child(1) > :nth-child(3) > :nth-child(2) > :nth-child(2) {
+            /*player_2 profile full name*/
+            width: 150px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            position: absolute;
+            left: 40px;
+            top: 0px; }
+          .game9ja-game-watch > .game9ja-game-watch-body > :nth-child(1) > :nth-child(3) > :nth-child(2) > :nth-child(3) {
+            /*player_2 activity status*/
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            position: absolute;
+            left: 40px;
+            bottom: 3px;
+            font-size: 14px;
+            font-style: italic;
+            color: #00bb00; }
+        .game9ja-game-watch > .game9ja-game-watch-body > :nth-child(1) > :nth-child(3) > :nth-child(3) {
+          /*the player_2 win, loss, draw display*/
+          position: absolute;
+          top: 2px;
+          right: 5px;
+          width: 200px;
+          text-align: right;
+          font-size: 12px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap; }
+    .game9ja-game-watch > .game9ja-game-watch-body > :nth-child(2) {
+      /* holds right panel for chats, comments etc*/
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 75%;
+      height: 100%;
+      background: radial-gradient(black 15%, transparent 16%) 0 0, radial-gradient(black 15%, transparent 16%) 8px 8px, radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 0 1px, radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 8px 9px;
+      background-color: #282828;
+      background-size: 16px 16px;
+      display: none;
+      box-shadow: -1.5px 0px 1px rgba(0, 0, 0, 0.2); }
+
+/*# sourceMappingURL=game-watch.css.map */

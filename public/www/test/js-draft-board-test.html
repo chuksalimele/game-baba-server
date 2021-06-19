@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../app/css/font-awesome-5.7.2.all.min.css" />
+        <link rel="stylesheet" href="../app/css/app-main.css" />
+        <link rel="stylesheet" href="../app/css/board.css" />
+        <script src="../resources/game_engines/draftgame.js"></script>
+        <script src="../lib/jquery-1.10.2.min.js"></script>
+        <script src="../lib/tween/TweenMax.min.js"></script>
+    </head>
+    <body>
+        <button onclick="showDraughts()" >Show 2D Draughts board</button>
+        <div id="board_container-outer" style="position: relative; width: 500px; height: 500px; margin:0 auto; background-color: yellow;">
+            <div id="board_container" style="width: 400px; height: 400px; position: absolute; top: 50px; left: 50px;"></div>
+        </div>
+
+        <script>
+            function Animate() {
+                this.to = function (element, duration, propObj, callback) {
+                    if (!element) {
+                        return;
+                    }
+                    var el = typeof element ==='string' ? document.getElementById(element) : element;
+                    var tween = propObj;
+                    tween.onComplete = callback;
+                    if (window.TweenMax) {
+                        TweenMax.to(el, duration / 1000, tween);
+                    } else if (window.TweenLite) {
+                        TweenLite.to(el, duration / 1000, tween);
+                    } else if (window.$) {
+                        $(el).animate(propObj, duration, callback);
+                    } else {
+
+                    }
+                };
+            }
+            function Toast() {
+                var wait;
+                var txts = [];
+                this.show = function (text) {
+
+                    var me = this;
+                    if (arguments.length > 0) {
+                        txts.push(text);
+                    }
+
+                    if (wait) {
+                        return;
+                    }
+
+                    wait = true;
+
+                    var toast_el = document.createElement('div');
+                    toast_el.style.zIndex = 10000;
+                    toast_el.className = 'game9ja-toast';
+                    toast_el.innerHTML = txts[0];
+                    toast_el.style.display = 'none';
+                    document.body.appendChild(toast_el);
+
+                    $(toast_el).stop()
+                            .fadeIn(400)
+                            .delay(3000)
+                            .fadeOut(400, function () {
+                                document.body.removeChild(toast_el);
+                                txts.splice(0, 1);
+                                wait = false;
+                                if (txts.length > 0) {
+                                    me.show.call(me);
+                                }
+                            });
+
+                };
+            }
+
+            var device_category = "medium";
+            var Main = {
+                anim: new Animate(),
+                toast: new Toast(),
+
+                util:{
+                  isString: function(a){
+                      return typeof a === 'string';
+                  },  
+                  isFunc: function(a){
+                      return typeof a === 'function';
+                  }  
+                },
+                device: {
+                    isMobileDeviceReady: false,
+
+                    isSmall: function () {
+                        return device_category === "small";
+                    },
+
+                    isMedium: function () {
+                        return device_category === "medium";
+                    },
+
+                    isLarge: function () {
+                        return device_category === "large";
+                    },
+
+                }
+            };
+
+            var Ns = {
+                game: {
+                    two: {},
+                    three: {}
+                },
+                Options:{
+                    isDragPiece: true,
+                    get2DChessPieceTheme:function(){
+                        return 'alpha';
+                    },
+                    get2DDraughtsPieceTheme:function(){
+                        return '';
+                    },
+                    getChessBoardThemeUrl: function(){
+                        return "../resources/games/chess/board/themes/wooddark/60.png";
+                    },
+                    getDraughtsBoardThemeUrl: function(){
+                        return "../resources/games/draughts/board/themes/wooddark/60.png";
+                    }
+                }
+                
+            };
+
+
+            function showDraughts(parameters) {
+                var obj = {
+                    variant: 'international-draughts',
+                    //flip: true, //used in watched games only. whether the board should face black to white direction. ie black is below and white above
+                    white: true, //whether the user is white or black. For watched games this field in absent
+                    container: 'board_container',
+                    boardTheme:'wooddark',
+                    pieceTheme: 'alpha',
+                    isTesting: true,
+                    is3D: false,
+                };
+
+                Ns.game.Draughts.load(obj);
+                
+            }
+
+
+            /* global Main, Ns */
+
+        </script>
+        <script src="../app/js/game/AbstractBoard2D.js"></script>
+        <script src="../app/js/game/two/Draughts2D.js"></script>
+        <script src="../app/js/game/Draughts.js"></script>
+
+
+        <script>
+            var ext = Ns.game.AbstractBoard2D;
+            for (var n in ext) {
+                if (!(n in Ns.game.two.Draughts2D)) {
+                    Ns.game.two.Draughts2D[n] = ext[n];
+                }
+
+            }
+
+
+        </script>
+    </body>
+</html>

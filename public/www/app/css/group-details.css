@@ -1,0 +1,208 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 31, 2017, 9:56:35 AM
+    Author     : Engr Chuks
+*/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 20, 2017, 3:37:46 PM
+    Author     : Engr Chuks
+*/
+.game9ja-header, .game9ja-light-header {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  height: 50px;
+  background: #222;
+  color: #eee; }
+
+.game9ja-light-header {
+  background: #565; }
+
+.game9ja-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 35px;
+  background: #222;
+  color: #eee; }
+
+grpbutton, .game9ja-group-details > :nth-child(2) > :nth-child(2) > input[type=button], .game9ja-group-details > :nth-child(2) > :nth-child(3) > input[type=button] {
+  background-color: transparent;
+  cursor: pointer;
+  height: 100%;
+  font-size: 14px;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  padding: 0; }
+  > grpbutton:hover, > .game9ja-group-details > :nth-child(2) > :nth-child(2) > input[type=button]:hover, > .game9ja-group-details > :nth-child(2) > :nth-child(3) > input[type=button]:hover {
+    background-color: #eee;
+    cursor: pointer; }
+
+.game9ja-group-details {
+  padding: 0;
+  overflow: auto; }
+  .game9ja-group-details > :nth-child(1) {
+    border-radius: 0px !important;
+    padding: 0 !important;
+    position: relative; }
+    .game9ja-group-details > :nth-child(1) > :nth-child(1) {
+      /*group profile pic*/
+      width: 100%;
+      height: 180px;
+      background: #222;
+      overflow: hidden;
+      margin: 0; }
+      .game9ja-group-details > :nth-child(1) > :nth-child(1) > div {
+        /*helper div to help center the group profile pic*/
+        max-width: 360px;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto; }
+        .game9ja-group-details > :nth-child(1) > :nth-child(1) > div > img {
+          /*group profile pic*/
+          width: 100%;
+          height: 100%; }
+    .game9ja-group-details > :nth-child(1) > :nth-child(2) {
+      /*group name*/
+      font-weight: 700;
+      color: #444;
+      padding-left: 5px;
+      padding-right: 5px;
+      box-sizing: border-box; }
+    .game9ja-group-details > :nth-child(1) > :nth-child(3) {
+      /*group profile status or motto*/
+      font-weight: 300;
+      font-size: 12px;
+      color: #777;
+      padding-left: 5px;
+      padding-right: 5px;
+      box-sizing: border-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
+    .game9ja-group-details > :nth-child(1) > :nth-child(4) {
+      /*edit botton*/
+      color: black;
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      cursor: pointer; }
+    .game9ja-group-details > :nth-child(1) groupheader, .game9ja-group-details > :nth-child(1) > :nth-child(5), .game9ja-group-details > :nth-child(1) > :nth-child(6) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 40px;
+      width: 100%;
+      color: white;
+      z-index: 1; }
+    .game9ja-group-details > :nth-child(1) > :nth-child(5) {
+      background: black;
+      opacity: 0.3; }
+    .game9ja-group-details > :nth-child(1) > :nth-child(6) > :nth-child(1) {
+      /*back button*/
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      cursor: pointer; }
+    .game9ja-group-details > :nth-child(1) > :nth-child(6) > :nth-child(2) {
+      /*comment*/
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer; }
+  .game9ja-group-details > :nth-child(2) {
+    /*group basics*/
+    border-radius: 0px !important;
+    position: relative; }
+    .game9ja-group-details > :nth-child(2) > div {
+      position: relative;
+      font-size: 14px;
+      color: #444;
+      height: 30px;
+      vertical-align: middle;
+      -webkit-box-sizing: box-sizing;
+      box-sizing: box-sizing;
+      border-bottom: 0.0325em #eee solid; }
+      .game9ja-group-details > :nth-child(2) > div > div {
+        position: absolute;
+        bottom: 0;
+        left: 0; }
+    .game9ja-group-details > :nth-child(2) > :nth-child(2) {
+      /*group settings*/ }
+    .game9ja-group-details > :nth-child(2) > :nth-child(3) {
+      /*custom notification*/ }
+  .game9ja-group-details > :nth-child(3) {
+    /*group admins*/
+    border-radius: 0px !important;
+    position: relative; }
+    .game9ja-group-details > :nth-child(3) > :nth-child(1) {
+      position: relative;
+      font-size: 14px;
+      color: #444;
+      height: 30px;
+      vertical-align: middle;
+      -webkit-box-sizing: box-sizing;
+      box-sizing: box-sizing;
+      border-bottom: 0.0325em #eee solid; }
+      .game9ja-group-details > :nth-child(3) > :nth-child(1) > :nth-child(1) {
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        font-size: 20px; }
+      .game9ja-group-details > :nth-child(3) > :nth-child(1) > :nth-child(2) {
+        position: absolute;
+        bottom: 2px;
+        right: 5px;
+        font-size: 14px;
+        background-color: transparent;
+        border-color: green;
+        outline: none; }
+  .game9ja-group-details > :nth-child(4) {
+    /*group members*/
+    border-radius: 0px !important;
+    position: relative; }
+    .game9ja-group-details > :nth-child(4) > :nth-child(1) {
+      position: relative;
+      font-size: 14px;
+      color: #444;
+      height: 30px;
+      vertical-align: middle;
+      -webkit-box-sizing: box-sizing;
+      box-sizing: box-sizing;
+      border-bottom: 0.0325em #eee solid; }
+      .game9ja-group-details > :nth-child(4) > :nth-child(1) > :nth-child(1) {
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        font-size: 20px; }
+      .game9ja-group-details > :nth-child(4) > :nth-child(1) > :nth-child(2) {
+        position: absolute;
+        bottom: 2px;
+        right: 5px;
+        font-size: 14px;
+        background-color: transparent;
+        border-color: green;
+        outline: none; }
+
+.game9ja-exit-group-btn {
+  background: transparent !important;
+  font-size: 10px !important;
+  color: #ff0000 !important;
+  border: 1px #ff0000 solid !important;
+  width: 65px !important;
+  height: 20px !important; }
+
+/*# sourceMappingURL=group-details.css.map */

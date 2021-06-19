@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../app/css/header-items.css" />
+        <link rel="stylesheet" href="../app/css/game-view.css" />
+        <link rel="stylesheet" href="../app/css/font-awesome-4.7.0.min.css" />
+    </head>
+    <body>
+
+        <div class="game9ja-game-view"  id="test">
+            <div class="game9ja-game-view-header">
+                <div>
+                    <div>Chuks Aimele</div> 
+                    <img src="images/white_player.jpg" alt=""/>
+                    <div>1 - 0</div>
+                    <div>Live</div>
+                    
+                    <img src="images/black_player.jpg" alt=""/>
+                    <div>Onome Okori </div>
+                </div>
+                <i class="fa fa-arrow-left game9ja-header-item-left game9ja-back-btn"></i><!--back button-->
+                <i class="fa fa-ellipsis-v game9ja-header-item-right"></i>
+            </div>
+            <div class="game9ja-game-view-body">
+                <div id="game9ja-game-view-main">
+                    
+                    <div id="game-view-main-upper"><!--sizing and positioning using javascript-->
+                        <!--some upper display e.g time countdown and online status-->
+                        <!--note when countdown starts it means the move is delivered to the opponent
+                        and when it stop it means the opponent has played or the countdown is over i.e timeout-->
+                        <div id="game-view-white-wdl">W 3, L 2, D 3</div> <!-- W 2, L 3, D 3  - win loss draw - this is for the current set e.g first 10, first 5 as called in nigeria-->
+                        <div id="game-view-feedback">thinking...</div> <!--feedback e.g making move... , thinking...-->
+                        <div id="game-view-black-wdl">W 2, L 3, D 3</div> <!-- W 3, L 2, D 3 - win loss draw - this is for the current set e.g first 10 first 5 as called in nigeria-->
+                    </div>
+                    <div id="game-view-main-board"><!--sizing and positioning using javascript-->
+                        <!--the game board-->
+                    </div>
+                    <div id="game-view-main-lower"><!--sizing and positioning using javascript-->
+                        <!--some lower display e.g time countdown -->
+                        <div id="game-view-white-countdown">05:34</div> <!-- 03:25 countdown-->
+                        <div id="game-view-black-countdown">04:21</div> <!--countdown-->
+                    </div>
+                    
+                </div>
+                <div id="game9ja-game-view-right-content">
+                    <!--holds panel in the side. this show by default in 
+                    large device but hidden in small device gets revealed dynamically-->
+                    <div class="game9ja-game-view-right-panel">
+                        <span id="game9ja-game-view-right-panel-header-title"></span>
+                        <span class="fa fa-close" id="game9ja-game-view-right-panel-close"></span>                        
+                        <div id="game9ja-game-view-right-panel-body">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="game9ja-game-view-footer">
+                <div id="game-view-footer-chat">
+                    <!--holds chat icon tab -->
+                    <i class="fa fa-comment"></i> <div >Chat</div>
+                </div>
+                <div id="game-view-footer-comments">
+                    <!--holds comments icon tab -->
+                    <i class="fa fa-comments"></i> <div >Comments</div>
+                </div> 
+                <div id="game-view-footer-spectators">
+                    <!--holds stats icon tab -->
+                    <i class="fa fa-users"></i> <div >Spectators</div>
+                </div>   
+                <div id="game-view-footer-stats">
+                    <!--holds voice call icon tab -->
+                    <i class="fa fa-line-chart"></i> <div >Stats</div>
+                </div>
+                <div id="game-view-footer-options">
+                    <!--holds video call icon tab -->
+                    <i class="fa fa-wrench"></i> <div >Options</div>
+                </div>
+
+            </div>
+        </div>
+
+            
+    </body>
+</html>
+
+
